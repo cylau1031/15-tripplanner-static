@@ -2,7 +2,26 @@
 
 {% block content %}
 <h1>Welcome to TripPlanner!</h1>
-<form>
+ <form class="index_form">
 
+   <label for="hotels">Hotels<select name="hotels">
+    {% for hotel in hotels %}
+    <option value= {{hotel.name}}> {{hotel.name}} </option>
+    {% endfor %}
+  </select></label>
+
+  <label for="restaurants">Restaurants<select name="restaurants">
+    {% for restaurant in restaurants %}
+    <option value= {{restaurant.name}}> {{restaurant.name}} </option>
+    {% endfor %}
+  </select></label>
+
+   <label for="activities">Activities<select name="activity">
+    {% for activity in activities %}
+    <option value= {{activity.name}}> {{activity.name}} </option>
+    {% endfor %}
+  </select></label>
 </form>
+
+
 {% endblock %}

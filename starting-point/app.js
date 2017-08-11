@@ -30,9 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(routes)
 
 //error-handler
-app.use(function (err, req, res, next) {
-	res.render('error', {error: err})
-})
+// app.use(function (err, req, res, next) {
+// 	res.render('error', {error: err})
+// })
 
 // do app.listen (inside a db.sync)
 db.sync()
